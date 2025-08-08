@@ -2504,7 +2504,7 @@ body.loaded #loading-screen {
   }
 
   .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(20px,));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Corrected value */
   }
 }
 
@@ -2620,13 +2620,27 @@ body.loaded #loading-screen {
   }
 
   .chat-window {
-    width: calc(100vw - 40px);
-    right: -10px;
+    width: auto; /* Allow width to be determined by left/right */
+    left: 20px; /* Add left padding */
+    right: 20px; /* Add right padding */
+    bottom: 80px; /* Keep bottom position */
   }
 
   .modal-content {
     width: 95%;
     margin: 10% auto;
+  }
+
+  .experience-badge {
+    right: auto; /* Remove fixed right */
+    left: 50%; /* Position from left */
+    transform: translateX(-50%); /* Center horizontally */
+    bottom: 20px; /* Keep bottom position */
+  }
+
+  .newsletter-form .form-group {
+    flex-direction: column; /* Stack input and button */
+    gap: 0.5rem; /* Adjust gap for stacking */
   }
 }
 
